@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Weather API {% endblock %}</h1>
+
+<p>Humidity Data {{humidity}}</p>
+
+<table>
+  <h1>
+    {%for i in filter %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{i|safe}}
+    {%endfor %}
+  </h1>
+</table>
+
+ <form method="post">
+ <button type="submit">Submit</button>
+</form>
+
+{% endblock %}
